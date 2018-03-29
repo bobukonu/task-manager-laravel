@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('tasks.index');
 });
+Route::resource('tasks', 'TaskController');
 
 Auth::routes();
 
